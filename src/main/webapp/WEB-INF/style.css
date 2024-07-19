@@ -1,0 +1,102 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    flex: 1 0 auto; /* Flex-grow, flex-shrink, and flex-basis */
+}
+.navbar-custom {
+    background-color: #8B0000 !important;
+    color: black;
+}
+.login-link {
+    color: #000; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: pointer; /* Mostra o cursor de mãozinha */
+}
+
+.login-link {
+    color: black; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 5px 10px; /* Adiciona padding para parecer um botão */
+    border: 1px solid transparent; /* Borda transparente para não parecer um botão */
+    border-radius: 5px; /* Adiciona borda arredondada */
+    cursor: pointer; /* Mostra o cursor de mãozinha */
+}
+
+.login-link:hover {
+    color: black; /* Mantém a cor do texto ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.footer {
+    background-color: #8B0000 !important;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #8B0000!important;
+    margin-top: auto; /* Faz com que o rodapé se mova para o fim */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer .contact-info, .footer .address-info {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.card-custom {
+    background-color: #8B0000;
+    color: white;
+}
+
+.btn-custom {
+    background-color: white;
+    color: #8B0000;
+}
+
+.btn-custom:hover {
+    background-color: #f8f9fa;
+    color: #8B0000;
+}
+
+.textcadastrar {
+    color: #8B0000;
+}
+
+.nav-link {
+    color: white;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}

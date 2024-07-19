@@ -1,0 +1,52 @@
+CREATE DATABASE albumavalia;
+
+CREATE TABLE usuario(
+	id serial PRIMARY KEY,
+	nome varchar(100) NOT NULL,
+	email varchar(100) NOT NULL UNIQUE,
+	senha varchar(50) NOT NULL,
+    permissao varchar(50) DEFAULT 'cliente'
+);
+
+CREATE TABLE album(
+    idalbum serial PRIMARY KEY,
+    nome_album varchar(100) NOT NULL,
+    data_lancamento varchar(4),
+    genero_musical varchar(50),
+    artista varchar(50),
+    musicas varchar(500),
+    notamedia float,
+    imagem varchar(1500)
+);
+
+
+CREATE TABLE avaliacao(
+    idavaliacao serial PRIMARY KEY,
+    idusuario INT REFERENCES usuario(id),
+    idalbum INT REFERENCES filme(idfilme),
+    nota FLOAT,
+    UNIQUE (idusuario, idfilme)
+);
+
+
+TODO O USUARIO POR PADRAO É CLIENTE, SENDO ASSIM PARA DAR ADMIN TEM QUE IR NA TABELA E ALTERAR O CAMPO PERMISSAO PARA ADMIN
+
+INSERT INTO usuario (nome, email, senha, permissao)
+VALUES ('Lauren adm', 'lauren@ufsm.com', 'senha123', 'admin');
+
+INSERT INTO usuario (nome, email, senha, permissao)
+VALUES ('Gabriel', 'gabriel@ufsm.com', '123senha', 'cliente');
+
+
+
+AlBUNS BASE APENAS
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('Guts', '2023', 'pop rock','1.all-american bitch 2.bad idea right? 3.vampire 4.lacy 5.ballad of a homeschooled girl 6.making the bed 7.logical 8.get him back!', 'https://m.media-amazon.com/images/I/91rzIsvpwjL._AC_UF1000,1000_QL80_.jpg');
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('Carros', '2006', 'Animação', 'Um carro de corrida arrogante aprende o valor da amizade em uma cidade pequena.', 'https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_.jpg');
+
+INSERT INTO filme (nomefilme, ano, categoria, descricao, imagem)
+VALUES ('O Clube da Luta', '1999', 'Drama', 'Um homem insone encontra um escape em um clube de luta secreto.', 'https://br.web.img3.acsta.net/medias/nmedia/18/90/95/96/20122166.jpg;
+
